@@ -9,9 +9,8 @@
 <h2>Manual Price <%= @product.ManualPrice %> </h2>
 
 <%= link_to "edit" , edit_product_path(@product), :class => 'btn btn-default' %>
-<%= link_to "Delete" , product_path(@product), 
-
-                    method: :delete,
+<%= link_to "Delete" , 
+"/products/#{@product.id}/delete", 
                     data: {confirm: 'Are you sure'},
                             :class => 'btn btn-danger' %>
                           

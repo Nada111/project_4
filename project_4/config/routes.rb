@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/products/:id/delete', to: "products#destroy"
   devise_for :users 
   resources :products
 
