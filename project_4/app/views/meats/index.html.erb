@@ -3,13 +3,18 @@
 <center>
 <div class="container">
 <div class="jumbotron">
-
+<%# <% current_user.carts.each do |a| %> 
+    <%# <%= a.product.productname %> 
+    <%# <%= a.product.PandaPrice%> 
+    <%# <%= a.product.DanubPrice %>
+    <%# <%= a.product.ManualPrice %> 
+<%# <% end %> 
 <% @product.each do |product| %>
     <% if product.product_type=='meat'%>
 
 
     <div class="well">
-    <%= @cart %>
+    
        <h3> <%= product.productname %></h3>
        <p> <%= image_tag product.image , :style=> 'width:300px' %></p>
 

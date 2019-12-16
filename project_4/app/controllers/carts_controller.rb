@@ -1,11 +1,23 @@
 class CartsController < ApplicationController
-    def new
-        @cart = Cart.new(product_id: params[:id])
-        if @cart.save
-            redirect_to "/meat/#{params[:id]}"
+    def add_cart
+        p current_user
+        if current_user
+            
+             @cart = Cart.new
+             
+             @cart[:user_id]= current_user.id 
+             @cart[:product_id]= params[:id] 
+
+            if @cart.save
+                redirect_to request.referer
+            else
+                redirect_to request.referer
+
+            end
         else
-            redirect_to "/meat/#{params[:id]}"
+            redirect_to product_path  
         end
+      
     end
     
 end

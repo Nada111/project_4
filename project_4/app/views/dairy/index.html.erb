@@ -17,7 +17,7 @@
        <p>Manual Price <%= product.ManualPrice %></p>
 
        
-       <%= link_to "Add" , :class => 'btn btn-default' %>
+       <%= link_to "Add" , "/carts/add/product/#{product.id}", :class => 'btn btn-default' %>
    </div>
    <% end %>
    <% end %>

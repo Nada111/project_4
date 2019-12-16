@@ -1,0 +1,14 @@
+<center><h3> Cart</h3>   </center>
+
+<center>
+
+<div class="jumbotron">
+<% current_user.carts.each do |a| %>
+    <%= a.product.productname %>
+   <p>Panda Price <%= a.product.PandaPrice%></p>
+   <p>Danub Price  <%= a.product.DanubPrice %></p>
+    <p>Manual Price <%= a.product.ManualPrice %></p>
+<% end %>
+
+   </div>
+   </center>

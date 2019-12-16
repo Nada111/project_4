@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
-  get '/carts/add/product/:id', to: "carts#new"
+  get '/carts/add/product/:id', to: "carts#add_cart"
   #get 'cart/product_id:integer'
   #get 'cart/current_user:integercart_id:integer'
   get '/products/:id/delete', to: "products#destroy"
