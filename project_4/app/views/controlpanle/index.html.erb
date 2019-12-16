@@ -1,0 +1,108 @@
+
+<center>
+
+<div class="container">
+
+<h1> index products</h1>
+ 
+<div class="form-row">
+<div class="col-md-6 mb-3">
+ <div class="jumbotron">
+ <h1> Dairy </h1>
+<% @product.each do |product| %>
+    
+    <% if product.product_type=="dairy" %>
+ 
+    <div class="well">
+       <h3>Product Name <%= product.productname %></h3>
+       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
+       <p>Panda Price <%= product.PandaPrice %></p>
+       <p>Danub Price <%= product.DanubPrice %></p>
+       <p>Manual Price <%= product.ManualPrice %></p>
+
+       
+       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+   </div>
+        <% end %>  
+        
+        <% end %>  
+   </div>
+
+   <div class="jumbotron">
+        <h1> Meat </h1>
+<% @product.each do |product| %>
+    
+    <% if product.product_type=="meat" %>
+ 
+    <div class="well">
+       <h3>Product Name <%= product.productname %></h3>
+       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
+       <p>Panda Price <%= product.PandaPrice %></p>
+       <p>Danub Price <%= product.DanubPrice %></p>
+       <p>Manual Price <%= product.ManualPrice %></p>
+
+       
+       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+   </div>
+        <% end %>  
+        
+        <% end %>  
+
+        </div>
+
+        <div class="jumbotron">
+        <h1> Home </h1>
+<% @product.each do |product| %>
+    
+    <% if product.product_type=='home'%>
+ 
+    <div class="well">
+       <h3>Product Name <%= product.productname %></h3>
+       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
+       <p>Panda Price <%= product.PandaPrice %></p>
+       <p>Danub Price <%= product.DanubPrice %></p>
+       <p>Manual Price <%= product.ManualPrice %></p>
+
+       
+       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+   </div>
+        <% end %>  
+        
+        <% end %>  
+
+        </div>
+
+        <div class="jumbotron">
+        <h1> Fruits </h1>
+<% @product.each do |product| %>
+    
+    <% if product.product_type=='fruitsVagetabels'%>
+ 
+    <div class="well">
+       <h3>Product Name <%= product.productname %></h3>
+       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
+       <p>Panda Price <%= product.PandaPrice %></p>
+       <p>Danub Price <%= product.DanubPrice %></p>
+       <p>Manual Price <%= product.ManualPrice %></p>
+
+       
+       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+   </div>
+        <% end %>  
+        
+        <% end %>  
+
+        </div>
+
+       
+
+
+
+       </div>
+
+   
+       </div>
+
+
+</div>
+ </center>

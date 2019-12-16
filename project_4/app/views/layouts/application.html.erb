@@ -17,7 +17,7 @@
 <a class="navbar-brand mb-1 h1"style="font-size: 30px;" href="#">project</a>
 <nav class="nav justify-content-end">
     <% if user_signed_in? %>
-      Logged in as :  <strong>  <%= current_user.email %></strong>.
+      Logged in as :  <strong>  <%= current_user.username %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
     <% else %>

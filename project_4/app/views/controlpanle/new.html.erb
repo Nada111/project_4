@@ -1,0 +1,53 @@
+
+<center>
+<div class="container">
+<div class="jumbotron">
+<h1> add products</h1>
+ 
+
+<%= form_for :product , url: products_path do |f| %>
+ 
+    <p>
+          <%= f.label :productname %><br>
+          <%= f.text_field(:productname , {:class => 'form-control'}) %>
+
+    </p>
+      <p>
+          <%= f.label :product_type%><br>
+          <%= f.select :product_type, ['dairy', 'meat','fruits','home'] %>
+
+    </p>
+    <p>
+          <%= f.label :DanubPrice %><br>
+          <%= f.number_field(:DanubPrice, {:class => 'form-control'}) %>
+
+    </p>
+    
+  
+<p>
+<%= f.label :PandaPrice %><br>
+<%= f.number_field(:PandaPrice, {:class => 'form-control'}) %>
+
+</p>
+<p>
+<%= f.label :ManualPrice %><br>
+<%= f.number_field(:ManualPrice, {:class => 'form-control'}) %>
+
+</p>
+
+<p>
+<%= f.label :image %><br>
+<%= f.file_field(:image, {:class => 'form-control'}) %>
+
+</p>
+    <p>
+           <%= f.submit({:class => 'btn btn-primary'}) %>
+
+    </p>
+    <% end %>
+
+
+
+</div>
+</div>
+ </center>

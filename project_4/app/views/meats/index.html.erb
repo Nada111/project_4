@@ -9,6 +9,7 @@
 
 
     <div class="well">
+    <%= @cart %>
        <h3> <%= product.productname %></h3>
        <p> <%= image_tag product.image , :style=> 'width:300px' %></p>
 
@@ -16,8 +17,9 @@
        <p>Danub Price <%= product.DanubPrice %></p>
        <p>Manual Price <%= product.ManualPrice %></p>
 
-       
-       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+       <%= link_to "Add" , "/carts/add/product/#{product.id}", :class => 'btn btn-default' %>
+
+       <%# <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %> 
    </div>
    <% end %>
    <% end %>
