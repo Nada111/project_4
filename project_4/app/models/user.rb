@@ -7,9 +7,6 @@ class User < ApplicationRecord
 
   has_many :carts
   
-      def username
-        return self.email.split('@')[0].capitalize
-        
-      end
+
       
 end
