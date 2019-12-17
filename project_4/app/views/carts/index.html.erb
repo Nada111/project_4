@@ -27,7 +27,11 @@
     <%@danubtotal+= a.product.DanubPrice %>
      <td> <%= a.product.ManualPrice %>
       <%@manualtotal+= a.product.ManualPrice %>
-  
+  <td><%= link_to "Delete" , 
+"/carts/#{a.id}/delete", 
+
+                    data: {confirm: 'Are you sure'},
+                            :class => 'btn btn-danger' %></td>
     </tr>
 <% end %>
 

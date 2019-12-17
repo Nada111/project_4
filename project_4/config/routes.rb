@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/carts/add/product/:id', to: "carts#add_cart"
   #get 'cart/product_id:integer'
   #get 'cart/current_user:integercart_id:integer'
+  get '/carts/:id/delete', to: "carts#destroy"
+
   get '/products/:id/delete', to: "products#destroy"
   devise_for :users 
   resources :products
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
   get '/admin/new' , to: 'controlpanle#new'
   get '/admin/new' , to: 'controlpanle#new'
   get '/admin/:id/delete', to: "products#destroy"
+
 
   resource :controlpanle, only: [:index, :new, :create, :destroy]
 
