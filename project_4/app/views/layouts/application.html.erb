@@ -13,9 +13,9 @@
   <body>
 
 <nav class="navbar  navbar-light" style="background-color: #ffcc00;" "fixed-top">
-
-<a class="navbar-brand mb-1 h1"style="font-size: 30px;" href="#">project</a>
-  <%= link_to "Cart" , "/carts", :class => 'btn btn-default' %>
+<img src="https://cdn2.iconfinder.com/data/icons/shopping-and-e-commerce-flat-circle-vol-1/100/cart__shopping__buy__ecommerce__shop__carticon__shoppingcart-512.png" width="10%"/>
+<h3 class="navbar-brand mb-1 h1"style="font-size: 20px; margin-left:-150px" >SMART SHOP </h3>
+  <%= link_to "Shopping List" , "/carts", :class => 'btn btn-default' %>
 <nav class="nav justify-content-end">
     <% if user_signed_in? %>
       Logged in as :  <strong>  <%= current_user.username %></strong>.

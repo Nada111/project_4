@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :home
 
 
-  get '/admin' , to: 'controlpanle#index'
+  get '/admin' , to: 'welcome#index'
   get '/admin/new' , to: 'controlpanle#new'
   get '/admin/new' , to: 'controlpanle#new'
   get '/admin/:id/delete', to: "products#destroy"
