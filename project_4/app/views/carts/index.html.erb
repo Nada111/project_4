@@ -1,16 +1,18 @@
 
+ <div style="padding:50px">
  <% if user_signed_in? %>
-<center><h3> Cart</h3>   </center>
-
+<center><h4> SHOPPING LIST</h4>   </center>
+<br>
+ 
 <center>
 
 
 <table class="table table-striped">
 <thead>
 <th scope="col"> product</th>
-<th scope="col">Panda Price </th>
-<th scope="col">Danlub Price </th>
-<th scope="col">ManualPrice </th>
+<th scope="col"><img src="http://www.ymco.sa/wp-content/uploads/2013/12/Panda.png" style="width:80px;  height:50px; float:center; margin-left:-10px"> </th>
+<th scope="col"><img src="https://m.eyeofriyadh.com/directory/images/2018/08/7ee1357422cb.png" style="width:80px; height:50px; float:center; margin-left:-15px">  </th>
+<th scope="col"><img src="http://www.manuelsupermarket.com/wp-content/uploads/flipbook/6/files/mobile-ext/appLogoIcon.png" style="width:80px; height:50px; float:center;margin-left:-20px;    "></th>
 </thead>
 <%@pandatotal=0%>
 <%@danubtotal=0%>
@@ -37,12 +39,50 @@
 
   </tbody>
 </table>
-  <p>panda Total <%=@pandatotal%></p>
-  <br>
-  <p>Danlub Total <%=@danubtotal%></p>
- <br>
-  <p>Manual Total <%=@manualtotal%></p>
 
+
+
+
+
+
+
+
+
+
+<div style=" padding:20px; display:grid; grid-column-gap: 50px; grid-template-columns: auto auto auto;">
+
+
+
+<div class="card" style="width: 12rem; ">
+  <img class="card-img-top" src="http://www.ymco.sa/wp-content/uploads/2013/12/Panda.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">TOTAL</h5>
+    <p class="card-text"><%=@pandatotal%></p>
+   </div>
+</div>
+<div class="card" style="width: 12rem; ">
+  <img class="card-img-top" src="https://m.eyeofriyadh.com/directory/images/2018/08/7ee1357422cb.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">TOTAL</h5>
+    <p class="card-text"><%=@danubtotal%> </p>
+   </div>
+</div>
+
+<div class="card" style="width: 12rem; ">
+  <img class="card-img-top" src="http://www.manuelsupermarket.com/wp-content/uploads/flipbook/6/files/mobile-ext/appLogoIcon.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">TOTAL</h5>
+    <p class="card-text"><%=@manualtotal%></p>
+   </div>
+</div>
+
+
+
+
+
+
+ 
+ </div>
    </center>
 
    <%else%>
@@ -50,4 +90,4 @@
   <br> <button class="btn btn-outline-info"> <%= link_to"Back" ,customer_index_path %>  </button> </center>
    <%end%>
 
-   
+   </div>

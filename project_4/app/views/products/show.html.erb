@@ -1,20 +1,33 @@
+<div style="padding:100px">
 <center>
-<div class="container">
-<div class="jumbotron">
-<%= image_tag(@product.image) %>
-<h2>Product Name <%= @product.productname %> </h2>
-<h2>Panda Price <%= @product.PandaPrice %> </h2>
-<h2>Danub Price <%= @product.DanubPrice %> </h2>
-<h2>Manual Price <%= @product.ManualPrice %> </h2>
+<table class="table table-striped">
+<thead>
+<th scope="col"> product</th>
+<th scope="col"><img src="http://www.ymco.sa/wp-content/uploads/2013/12/Panda.png" style="width:70px;  height:50px;   margin-right:100px"> </th>
+<th scope="col"><img src="https://m.eyeofriyadh.com/directory/images/2018/08/7ee1357422cb.png" style="width:80px; height:50px;  margin-right:120px">  </th>
+<th scope="col"><img src="http://www.manuelsupermarket.com/wp-content/uploads/flipbook/6/files/mobile-ext/appLogoIcon.png" style="width:80px; height:50px;  margin-left:-20px;    "></th>
+</thead>
+<tbody>
+ <tr> 
+  <td> 
+  <%= image_tag @product.image , :style=> 'width:200px' %>  
+  <br>
+  <br>
+   <h5 style="text-align: center"><%= @product.productname  %>  </h5>
+</td>
+ 
+<td>  <%= @product.PandaPrice %>  </td>
+<td>  <%= @product.DanubPrice %>  </td>
+<td>  <%= @product.ManualPrice %>  </td>
 
+<tr>
+</tbody>
 
-
-<%= link_to "edit" , edit_product_path(@product), :class => 'btn btn-default' %>
-<%= link_to "Delete" , 
+  </table>  
+ <%= link_to "edit" , edit_product_path(@product), :class => 'btn btn-default' %> 
+ <%= link_to "Delete" , 
 "/products/#{@product.id}/delete", 
                     data: {confirm: 'Are you sure'},
-                            :class => 'btn btn-danger' %>
-                          
-                             </div>
-</div>
+                            :class => 'btn btn-danger' %> 
  </center>
+ </div>

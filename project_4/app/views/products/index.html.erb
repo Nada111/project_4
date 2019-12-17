@@ -1,108 +1,141 @@
 
+ <div style="padding:50px">
 <center>
 
-<div class="container">
 
-<h1> index products</h1>
- 
-<div class="form-row">
-<div class="col-md-6 mb-3">
- <div class="jumbotron">
- <h1> Dairy </h1>
+
+<table class="table table-striped">
+<thead>
+<th scope="col"> product</th>
+<th scope="col"><img src="http://www.ymco.sa/wp-content/uploads/2013/12/Panda.png" style="width:80px;  height:50px; float:center; margin-left:-10px"> </th>
+<th scope="col"><img src="https://m.eyeofriyadh.com/directory/images/2018/08/7ee1357422cb.png" style="width:80px; height:50px; float:center; margin-left:-15px">  </th>
+<th scope="col"><img src="http://www.manuelsupermarket.com/wp-content/uploads/flipbook/6/files/mobile-ext/appLogoIcon.png" style="width:80px; height:50px; float:center;margin-left:-20px;    "></th>
+</thead>
+<tbody>
+
 <% @product.each do |product| %>
-    
-    <% if product.product_type=="dairy" %>
- 
-    <div class="well">
-       <h3>Product Name <%= product.productname %></h3>
-       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
-      <img src="http://www.ymco.sa/wp-content/uploads/2013/12/Panda.png" style="width:100px; height:50px; float:left;margin-left:80px"> <p style="float:left;margin-left:30px; margin-top:10px"><%= product.PandaPrice %></p>
-       <img src="https://m.eyeofriyadh.com/directory/images/2018/08/7ee1357422cb.png" style="width:100px; height:50px; float:left;margin-left:80px; clear:both; margin-bottom:15px"> <p style="float:left;margin-left:30px; margin-top:10px"><%= product.DanubPrice %></p>
-     <img src="http://www.manuelsupermarket.com/wp-content/uploads/flipbook/6/files/mobile-ext/appLogoIcon.png" style="width:100px; height:50px; float:left;margin-left:80px; clear:both; margin-bottom:15px"> <p style="float:left;margin-left:30px; margin-top:10px"><%= product.ManualPrice %></p>
+    <% if product.product_type=='dairy'%>
 
+  <tr> 
+  <td>  
+   <p> <%= image_tag product.image , :style=> 'width:100px' %></p>
+   <p> <%=product.productname%></p>
+  <td> <%= product.PandaPrice%></td>
        
-       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
-   </div>
-        <% end %>  
-     
-        <% end %>  
-    </div>  
-
-   <div class="jumbotron">
-        <h1> Meat </h1>
-<% @product.each do |product| %>
+   <td>  <%=product.DanubPrice %></td>
+     <td> <%= product.ManualPrice %></td>
     
-    <% if product.product_type=="meat" %>
+  <td>        <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+</td>
+    </tr>
+<% end %>
+<% end %>
+
+  </tbody>
+</table>
+
+   </center>
+
+<br>
+<br>
  
-    <div class="well">
-       <h3>Product Name <%= product.productname %></h3>
-       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
-       <p>Panda Price <%= product.PandaPrice %></p>
-       <p>Danub Price <%= product.DanubPrice %></p>
-       <p>Manual Price <%= product.ManualPrice %></p>
+<center>
 
-       
-       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
-   </div>
-        <% end %>  
-        
-        <% end %>  
+<h3 style="float:left;">  MEATS </h3> 
 
-        </div>
 
-        <div class="jumbotron">
-        <h1> Home </h1>
+<table class="table table-striped">
+ 
+
+
+<tbody>
 <% @product.each do |product| %>
+    <% if product.product_type=='meat'%>
+
+  <tr> 
+  <td>  
+   <p> <%= image_tag product.image , :style=> 'width:100px' %></p>
+   <p> <%=product.productname%></p>
+  <td> <%= product.PandaPrice%>
+       
+   <td>  <%=product.DanubPrice %>
+     <td> <%= product.ManualPrice %>
     
+  <td>        <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+</td>
+    </tr>
+<% end %>
+<% end %>
+
+  </tbody>
+</table>
+
+   </center>
+
+<br>
+<br>
+
+<h3 style="float:left;"> FRUITS AND VEGATEBALES </h3>
+
+
+<table class="table table-striped">
+ 
+
+<tbody>
+<% @product.each do |product| %>
+    <% if product.product_type=='fruits'%>
+
+  <tr> 
+  <td>  
+   <p> <%= image_tag product.image , :style=> 'width:100px' %></p>
+   <p> <%=product.productname%></p>
+  <td> <%= product.PandaPrice%>
+       
+   <td>  <%=product.DanubPrice %>
+     <td> <%= product.ManualPrice %>
+    
+  <td>        <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+</td>
+    </tr>
+<% end %>
+<% end %>
+
+  </tbody>
+</table>
+
+   </center>
+<br>
+<br>
+
+
+<h3 style="float:left;">  HOME </h3>
+
+
+<table class="table table-striped">
+ 
+
+
+<tbody>
+<% @product.each do |product| %>
     <% if product.product_type=='home'%>
- 
-    <div class="well">
-       <h3>Product Name <%= product.productname %></h3>
-       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
-       <p>Panda Price <%= product.PandaPrice %></p>
-       <p>Danub Price <%= product.DanubPrice %></p>
-       <p>Manual Price <%= product.ManualPrice %></p>
 
+  <tr> 
+  <td>  
+   <p> <%= image_tag product.image , :style=> 'width:100px' %></p>
+   <p> <%=product.productname%></p>
+  <td> <%= product.PandaPrice%>
        
-       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
-   </div>
-        <% end %>  
-        
-        <% end %>  
-
-        </div>
-
-        <div class="jumbotron">
-        <h1> Fruits </h1>
-<% @product.each do |product| %>
+   <td>  <%=product.DanubPrice %>
+     <td> <%= product.ManualPrice %>
     
-    <% if product.product_type=='fruitsVagetabels'%>
- 
-    <div class="well">
-       <h3>Product Name <%= product.productname %></h3>
-       <p> <%= image_tag(product.image , :style=> 'width:300px') %></p>
-       <p>Panda Price <%= product.PandaPrice %></p>
-       <p>Danub Price <%= product.DanubPrice %></p>
-       <p>Manual Price <%= product.ManualPrice %></p>
+  <td>        <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+</td>
+    </tr>
+<% end %>
+<% end %>
 
-       
-       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
+  </tbody>
+</table>
+
+   </center>
    </div>
-        <% end %>  
-        
-        <% end %>  
-
-        </div>
-
-       
-
-
-
-       </div>
-
-   
-       </div>
-
-
-</div>
- </center>
