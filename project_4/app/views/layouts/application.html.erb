@@ -15,6 +15,7 @@
 <nav class="navbar  navbar-light" style="background-color: #ffcc00;" "fixed-top">
 
 <a class="navbar-brand mb-1 h1"style="font-size: 30px;" href="#">project</a>
+  <%= link_to "Cart" , "/carts", :class => 'btn btn-default' %>
 <nav class="nav justify-content-end">
     <% if user_signed_in? %>
       Logged in as :  <strong>  <%= current_user.username %></strong>.

@@ -1,14 +1,49 @@
+
+ <% if user_signed_in? %>
 <center><h3> Cart</h3>   </center>
 
 <center>
 
-<div class="jumbotron">
+
+<table class="table table-striped">
+<thead>
+<th scope="col"> product</th>
+<th scope="col">Panda Price </th>
+<th scope="col">Danlub Price </th>
+<th scope="col">ManualPrice </th>
+</thead>
+<%@pandatotal=0%>
+<%@danubtotal=0%>
+<%@manualtotal=0%>
+
+<tbody>
 <% current_user.carts.each do |a| %>
-    <%= a.product.productname %>
-   <p>Panda Price <%= a.product.PandaPrice%></p>
-   <p>Danub Price  <%= a.product.DanubPrice %></p>
-    <p>Manual Price <%= a.product.ManualPrice %></p>
+  <tr> 
+  <td>  <p> <%= image_tag a.product.image , :style=> 'width:100px' %></p>
+   <%= a.product.productname %>
+  <td> <%= a.product.PandaPrice%>
+       <%@pandatotal+= a.product.PandaPrice %>
+   <td>  <%= a.product.DanubPrice %>
+    <%@danubtotal+= a.product.DanubPrice %>
+     <td> <%= a.product.ManualPrice %>
+      <%@manualtotal+= a.product.ManualPrice %>
+  
+    </tr>
 <% end %>
 
-   </div>
+  </tbody>
+</table>
+  <p>panda Total <%=@pandatotal%></p>
+  <br>
+  <p>Danlub Total <%=@danubtotal%></p>
+ <br>
+  <p>Manual Total <%=@manualtotal%></p>
+
    </center>
+
+   <%else%>
+   <center> you must register/sign in
+  <br> <button class="btn btn-outline-info"> <%= link_to"Back" ,customer_index_path %>  </button> </center>
+   <%end%>
+
+   

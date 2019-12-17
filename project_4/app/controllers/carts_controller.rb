@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
     def add_cart
-        p current_user
+      
         if current_user
             
              @cart = Cart.new
@@ -14,9 +14,9 @@ class CartsController < ApplicationController
                 redirect_to request.referer
 
             end
-        else
-            redirect_to product_path  
-        end
+       
+
+         end
       
     end
     

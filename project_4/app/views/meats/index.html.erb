@@ -1,33 +1,26 @@
-<center><h3> Meats </h3>   </center>
+<center><h3> Meat </h3></center>
 
 <center>
 <div class="container">
 <div class="jumbotron">
-<%# <% current_user.carts.each do |a| %> 
-    <%# <%= a.product.productname %> 
-    <%# <%= a.product.PandaPrice%> 
-    <%# <%= a.product.DanubPrice %>
-    <%# <%= a.product.ManualPrice %> 
-<%# <% end %> 
+
 <% @product.each do |product| %>
     <% if product.product_type=='meat'%>
 
 
     <div class="well">
-    
-       <h3> <%= product.productname %></h3>
+       <h3>Product Name <%= product.productname %></h3>
        <p> <%= image_tag product.image , :style=> 'width:300px' %></p>
 
         <p>Panda Price <%= product.PandaPrice %></p>
        <p>Danub Price <%= product.DanubPrice %></p>
        <p>Manual Price <%= product.ManualPrice %></p>
 
+       
        <%= link_to "Add" , "/carts/add/product/#{product.id}", :class => 'btn btn-default' %>
-
-       <%# <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %> 
    </div>
    <% end %>
    <% end %>
-   </div> 
-   </div>
-   </center>
+</div> 
+</div>
+</center>
