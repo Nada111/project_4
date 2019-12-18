@@ -27,9 +27,14 @@
        
    <td>  <%=product.DanubPrice %>
      <td> <%= product.ManualPrice %>
-    
+             <% if user_signed_in? %>
+
   <td> <%= link_to "Add" , "/carts/add/product/#{product.id}", :class => 'btn btn-primary'  %></td>
-    </tr>
+       <%else%>
+   <center> register/sign in to add 
+  <br> <button class="btn btn-outline-info"> <%= link_to"Add" ,new_user_registration_path %>  </button> </center>
+   <%end%>
+  </tr>
 <% end %>
 <% end %>
 
