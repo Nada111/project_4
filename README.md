@@ -1,24 +1,30 @@
-# README
+SMART SHOP
+Description: is a web application that allows a customer to choose which supermarket to shop from based on the best weekly offers.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Technologies and libraries:
 
-Things you may want to cover:
+Frontend and Backend:Ruby on Rails
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+user stories:
 
-* Database initialization
+As a customer I would like to display different prices from many stores for a product .
+As a customer I would like to make my shopping list.
+As a customer I would like to decied which supermarket to shope from
+As an adminstrorstor I would like to add new product.
+As an adminstrorstor I would like to add edit existing product.
+As an adminstrorstor I would like to display all products.
+As an adminstrorstor I would like to delete a product.
 
-* How to run the test suite
+Planning and development process:
 
-* Services (job queues, cache servers, search engines, etc.)
+pre-project week work
 
-* Deployment instructions
+Brainstormed the main features of the website.
+Categorized the user types.
+Designed the website wireframes on paper.
+project week work (members work)
 
-* ...
+
