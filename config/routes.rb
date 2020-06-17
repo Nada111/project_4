@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
- 
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
   get '/carts/add/product/:id', to: "carts#add_cart"
   #get 'cart/product_id:integer'
   #get 'cart/current_user:integercart_id:integer'
@@ -26,5 +27,4 @@ Rails.application.routes.draw do
 
 
   root to: "customer#index"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
